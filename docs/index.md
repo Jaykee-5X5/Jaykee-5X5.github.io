@@ -6,4 +6,5 @@ tags:
 ---
 
 ## Hello my name is Jacob 
-### I looked in the mirror, and guess what it told me...
+blahb blah blah 
+I looked into the mirror, and guess what it told me...
