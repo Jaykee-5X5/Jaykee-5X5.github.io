@@ -1,8 +1,8 @@
 ---
-title: Second Page
+title: Individual Block Diagram
 ---
 
 
-Custom Block Diagram
+Individual Block Diagram
 
-Paste here*
+<img src="./Images/SchematicActuatorSubsystem.pdf">
