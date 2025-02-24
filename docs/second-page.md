@@ -2,4 +2,7 @@
 title: Second Page
 ---
 
-Things to discuss
+
+Custom Block Diagram
+
+Paste here*
