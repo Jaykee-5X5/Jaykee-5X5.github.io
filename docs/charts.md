@@ -4,4 +4,7 @@ title: Component Selection
 
 Components Selected 
 
-<img src="./Images/Free Documents-1.png">
+<img src="[def]">
+
+
+[def]: /Images/Free Documents-1.pn
