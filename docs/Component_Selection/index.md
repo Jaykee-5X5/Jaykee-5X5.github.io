@@ -19,25 +19,8 @@ title: Component Selection
 
 ### Microcontroller Selection
 
-#### Reason for Selection
-For my microcontroller I decided to go with the PIC18F47Q10-I/PT. This is the surface mount varient of the PIC18F47Q10 that we have used in class. Below is a table of all the information about the microcontroller.
-
-| PIC Info                                | Answer |
-| --------------------------------------- | ------ |
-| Model                                   | PIC18F47Q10-I/PT |
-| Product Page URL                        | [Product Page](https://www.microchip.com/en-us/product/pic18f47q10#Overview) |
-| Datasheet URL                           | [Datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18F27-47Q10-Data-Sheet-40002043E.pdf) |
-| Application Notes URL                   | [Application Notes](https://www.microchip.com/en-us/product/pic18f47q10#Design%20Resources) |
-| Vendor Link                             | [Vendor Link](https://www.digikey.com/en/products/detail/microchip-technology/PIC18F47Q10-I-PT/10187786) |
-| Code Examples                           | [Code Example GPIO Read/Write](https://github.com/microchip-pic-avr-examples/pic18f47q10-cnano-gpio-read-write-bare/tree/1.0.6) <br> [Code Example I2C Read/Write](https://github.com/microchip-pic-avr-examples/pic18f47q10-cnano-i2c-read-write-temp-sensor-mcc/tree/1.0.1) |
-| External Resources                      | [Programming OLED screen with MPLabX and a PIC](https://embeddedlaboratory.blogspot.com/2018/02/oled-i2c-display-using-microchip-pic.html) |
-| Unit Cost                               | $1.65 |
-| Supply voltage range                    | 1.8V min to 5.5V max |
-| Maximum GPIO Current (per pin)          | 50 mA |
-| Supports External Interrupts            | Yes |
-| Required Programming Hardwar, Cost, URL | [MPLAB SNAP](https://www.microchip.com/en-us/development-tool/PG164100) <br> Cost: $14.99 |
-| Works with MPLabX                       | Yes |
-| Works with Microchip Code Configurator  | Yes |
+I am choosing a varaint of the ESP32 WROOM surface mount. The total number of pins I need are still TBD.
+![ESP32](ESP32.jpg)
 
 #### Role on the team
 The actuator subsystem is in charge of receiving data from the sensor subsystem, processing it, then adjusting the current state of the actuators. Whether that is on or off, or slow or fast, my subsystem is aimed at keeping the sensor subsystem on target. 
