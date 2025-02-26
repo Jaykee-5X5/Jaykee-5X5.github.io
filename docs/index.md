@@ -13,7 +13,6 @@ This is the website for the actuator subsystem for Team 204.
 
 - [Individual Block Diagram](IndividualBlockDiagram/index.md)
 - [Component Selection](ComponentSelection/index.md)
-- [Actuator Subsystem Schematic](Schematic/index.md)
 
 ## To group website
 
