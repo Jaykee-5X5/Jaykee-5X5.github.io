@@ -11,8 +11,8 @@ This is the website for the actuator subsystem for Team 204.
 
 ## Directory
 
-- [Individual Block Diagram](IndividualBlockDiagram/index.md)
-- [Component Selection](ComponentSelection/index.md)
+- [Individual Block Diagram](docs\Individual_Block_Diagram)
+- [Component Selection](docs\Component_Selection)
 
 ## To group website
 
