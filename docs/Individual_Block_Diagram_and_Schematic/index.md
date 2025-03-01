@@ -11,4 +11,4 @@ Here is the Block Diagram and schematic for the actuator subsystem. The microcon
 
 ![Individual Block Diagram](BlockJacob.jpg)
 ![Actucator Subsystem Schematic](SchemJW.png)
-The functionality of the schematic revolves satisies our product requirements by allowing our motors to be controlled through SPI communication with my teammates boards. In terms of user needs, this setup puts reliability and reproducablilty at the forefront. There is nothing fancy happening here, just raw performance. 
+The functionality of the schematic satisies our product requirements by allowing our motors to be controlled through SPI communication with my teammates boards. In terms of user needs, this setup puts reliability and reproducablilty at the forefront. There is nothing fancy happening here, just raw performance. 
