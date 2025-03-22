@@ -1,3 +1,7 @@
+---
+title: API
+---
+
 For the acutator subsystem I need to send a verification message on startup, robot following distance, following speed, and status. 
 Any Valid messages I recieve that are intended for another teammate, I will repeat the message along the daisychain. Valid messages sent to me will include; motor speed adjust, motor rotation change (motor 1 or 2). 
 
