@@ -9,7 +9,7 @@ Any Valid messages I recieve that are intended for another teammate, I will repe
 | Type | Byte 1 | Byte 2 |
 | ---- | ------ | ------ |
 | Variable Name | message_type | motor_speed |
-| Variable Type | uint8_t | int8_t |
+| Variable Type | uint16_t | int16_t |
 | Min Value | 0 | 0 |
 | Max Value | 9 | 100 |
 | Example | 0 | 50 |
@@ -18,7 +18,7 @@ Any Valid messages I recieve that are intended for another teammate, I will repe
 | Type | Byte 1 | Byte 2 | Byte 3 |
 | ---- | ------ | ------ | ------ |
 | Variable Name | message_type | motor_id | motor_speed |
-| Variable Type | uint8_t | uint8_t | int8_t |
+| Variable Type | uint16_t | uint16_t | int16_t |
 | Min Value | 0 | 1 | 0 |
 | Max Value | 9 | 2| 100 |
 | Example | 0 | 1 | 30 |
