@@ -3,7 +3,7 @@
 For the acutator subsystem I need to send a verification message on startup, robot following distance, following speed, and status. 
 Any Valid messages I recieve that are intended for another teammate, I will repeat the message along the daisychain. Valid messages sent to me will include; motor speed adjust, motor rotation change (motor 1 or 2). 
 
-![API (3/30)](Mesage_Protocol_API.png)
+![API (3/30)][MessageProtocol]
 
 #### Change Motor Speed
 | Type | Byte 1 | Byte 2 |
@@ -26,3 +26,4 @@ Any Valid messages I recieve that are intended for another teammate, I will repe
 
 
 [def]: Mesage_Protocol_API.png
+[MessageProtocol]: Mesage_Protocol_API.png
