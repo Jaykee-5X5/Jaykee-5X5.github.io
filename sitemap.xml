@@ -6,7 +6,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://embedded-systems-design.github.io/template_report/Actuator%20Subsystem%20API/</loc>
+         <loc>https://embedded-systems-design.github.io/template_report/Actuator_Subsystem_API/</loc>
          <lastmod>2025-05-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -27,6 +27,11 @@
     </url>
     <url>
          <loc>https://embedded-systems-design.github.io/template_report/Individual_Block_Diagram_and_Schematic/</loc>
+         <lastmod>2025-05-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://embedded-systems-design.github.io/template_report/PCB_Design/</loc>
          <lastmod>2025-05-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
