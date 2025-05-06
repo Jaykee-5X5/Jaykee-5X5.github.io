@@ -5,11 +5,26 @@ title: Individual Block Diagram
 ## Block Diagram
 
 ### Overview
-Here is the Block Diagram and schematic for the actuator subsystem. The microcontroller chosen to run the actuator subsytem is the ESP32 WROOM surface mount. With that, I plan on using SPI to communicate with the sensor module, and to use uart with the others. The actuator itself will be powered by a separate 9V DC battery supply, while the other electronics will use shared power from a 3.3V buck converter setup. The upstream and downstream headers are to allow serial communication between all subsystems through a daisychain connection. 
+This section presents the Block Diagram and schematic for the actuator subsystem, detailing communication protocols, power distribution, and system integration.
+
+Microcontroller & Communication Protocols
+The ESP32 WROOM surface-mount microcontroller is selected to control the actuator subsystem.
+
+SPI is utilized for communication with the sensor module and actuators.
+
+UART is employed for interfacing with the remaining subsystems.
+
+Power Distribution
+Actuator Power Supply: A dedicated 9V DC battery ensures stable operation.
+
+Supporting Electronics Power: A 3.3V buck converter setup supplies shared power for additional components.
+
+Serial Communication Integration
+To maintain seamless data flow across all subsystems, upstream and downstream headers enable serial communication through a daisy-chain connection, ensuring efficient message propagation. 
 
 ### Block Diagram and Schematic
 
 ![Individual Block Diagram](BlockJacob.jpg)
 ![Actucator Subsystem Schematic](SchemJWNEW-1.png)
 The functionality of the schematic satisies our product requirements by allowing our motors to be controlled through SPI communication with my teammates boards. In terms of user needs, this setup puts reliability and reproducablilty at the forefront. There is nothing fancy happening here, just raw performance. 
-[Altium Zip File](ActuatorSubsystemSchematic.zip)
+[Cadence Zip File](ActuatorSubsystemSchematic.zip)

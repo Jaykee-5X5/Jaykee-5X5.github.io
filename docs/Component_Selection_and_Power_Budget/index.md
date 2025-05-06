@@ -5,7 +5,7 @@ title: Component Selection
 ### Major Components
 
 **Switching Voltage Regulator**
-
+The voltage regulator is a critical component for ensuring stable power delivery to the ESP32 surface mount and supporting components on the PCB. Below are the evaluated options:
 | **Solution**                                                                                                                                                                                      | **Pros**                                                                                                                                    | **Cons**                                                                                            |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
 | ![LM2575 Swithcing Voltage Regulator](LM2575_Voltage_Regulator.jpg)<br>Option 1<br> LM2575 Switching Voltage Regulator<br>$1.75/each<br>[link to product](https://www.digikey.com/en/products/detail/microchip-technology/LM2575-3-3WU-TR/1027646)           | \* Simple external circuit<br>\* Small size <br>\* Meets surface mount constraint of project <br>\* Good data sheet | \* All pins are on one side<br>\* really small                     |
@@ -14,16 +14,16 @@ title: Component Selection
 
 **Choice:** Option 1: LM2575 Switching Voltage Regulator
 
-**Rationale:** I am following the footsteps of Jake, and also choosing this switching voltage regulator. This will help power the ESP32 surface mount and any other suporting components that will make their way onto the pcb later this semester. 
+**Rationale:** Following Jake’s approach, I have chosen the LM2575 regulator as it offers a simple circuit, compact size, and ease of integration while meeting surface mount constraints. This regulator will provide stable power for the ESP32 and additional PCB components.
 
 
 ### Microcontroller Selection
 
-I am choosing a varaint of the ESP32 WROOM surface mount. The total number of pins I need are still TBD.
+I have selected a variant of the ESP32 WROOM surface mount microcontroller. The total number of required pins is still to be determined, but the ESP32 provides sufficient versatility for actuator control and SPI communication.
 ![ESP32](ESP32.jpg)
 
 #### Role on the team
-The actuator subsystem is in charge of receiving data from the sensor subsystem, processing it, then adjusting the current state of the actuators. Whether that is on or off, or slow or fast, my subsystem is aimed at keeping the sensor subsystem on target. 
+The actuator subsystem processes incoming data from the sensor subsystem and dynamically adjusts actuator states—whether turning components on/off or modifying their speed. This subsystem is critical for maintaining the sensor's tracking accuracy.
 
 
 #### Pins needed
@@ -38,7 +38,6 @@ For my subsystem I am not completely sure how many pins I will use in total, how
 | PWM    |  N/A        | TBD    | TBD             |
 
 ### Final Selection
-The ESP32 is the best route, since it has a long track record of being used to conrol actuators in many hobbyist, and professional production applications. Since I am also planning on integrating a SPI communication link between my subsystem and the sensor subsystem, I personally think the ESP32 is the way to go. 
-
+The ESP32 has a strong track record in actuator control applications, ranging from hobbyist projects to professional-grade systems. Additionally, since I plan to integrate an SPI communication link between the actuator and sensor subsystems, the ESP32 provides the necessary features and flexibility.
 
 
