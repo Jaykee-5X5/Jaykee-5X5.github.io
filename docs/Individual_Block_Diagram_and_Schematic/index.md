@@ -24,7 +24,7 @@ To maintain seamless data flow across all subsystems, upstream and downstream he
 
 ### Block Diagram and Schematic
 
-![Individual Block Diagram](BlockJacob.jpg)
-![Actucator Subsystem Schematic](SchemJWNEW-1.png)
+![Individual Block Diagram](EGR314-Team204-IndividualBlockDiagram-Jacob.drawio.png)
+![Actucator Subsystem Schematic](page0.png)
 The functionality of the schematic satisies our product requirements by allowing our motors to be controlled through SPI communication with my teammates boards. In terms of user needs, this setup puts reliability and reproducablilty at the forefront. There is nothing fancy happening here, just raw performance. 
-[Cadence Zip File](ActuatorSubsystemSchematic.zip)
+[Schematic Zip File](Individual_Block_Diagram_and_Schematic/PCB314 - Copy.zip)
