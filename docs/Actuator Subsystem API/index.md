@@ -11,8 +11,6 @@ Motor Speed Adjustments
 
 Motor Rotation Control (for motor 1 or motor 2)
 
-![diagram_03](Mes_Str.png "Message types")
-
 #### Change Motor Speed
 | Type | Byte 1 | Byte 2 |
 | ---- | ------ | ------ |
