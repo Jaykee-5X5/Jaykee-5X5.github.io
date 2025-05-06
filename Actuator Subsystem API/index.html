@@ -535,6 +535,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#other-types-of-messages" class="md-nav__link">
+    Other Types of Messages
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -567,21 +574,97 @@
 <p>Motor Rotation Control (for motor 1 or motor 2)</p>
 <p><a class="glightbox" href="Mes_Str.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="diagram_03" src="Mes_Str.png" title="Message types" /></a></p>
 <h4 id="change-motor-speed">Change Motor Speed</h4>
-<p>Modifies the speed of the motor based on the provided parameters.</p>
-<p>|Type | Byte 1  | Byte 2
-|Variable Name| message_type|   motor_speed|
-|Variable Type| uint16_t|   int16_t|
-|Min Value| 0|  0|
-|Max Value| 9|  100|
-|Example|   0|  50|</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Byte 1</th>
+<th>Byte 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variable Name</td>
+<td>message_type</td>
+<td>motor_speed</td>
+</tr>
+<tr>
+<td>Variable Type</td>
+<td>uint8_t</td>
+<td>int8_t</td>
+</tr>
+<tr>
+<td>Min Value</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Max Value</td>
+<td>9</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>0</td>
+<td>50</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>This message changes the speed at which the motors will move at. The message begins with the message type allowing the reciever to sort the message easier, then byte 2 is the target speed at which the motor will travel at. The speed value does not control the motor directly just states at what speed all the motors will move at. </li>
+</ul>
 <h4 id="drive-individual-motor">Drive Individual motor</h4>
-<p>Directly controls a specific motor, enabling independent speed adjustments.</p>
-<p>|Type   |Byte 1|    Byte 2| Byte 3|
-|Variable Name  |message_type   |motor_id   |motor_speed|
-|Variable Type  |uint16_t   |uint16_t   |int16_t|
-|Min Value  |0  |1  |0|
-|Max Value  |9  |2  |100|
-|Example    |0  |1  |30|</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Byte 1</th>
+<th>Byte 2</th>
+<th>Byte 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Variable Name</td>
+<td>message_type</td>
+<td>motor_id</td>
+<td>motor_speed</td>
+</tr>
+<tr>
+<td>Variable Type</td>
+<td>uint8_t</td>
+<td>uint8_t</td>
+<td>int8_t</td>
+</tr>
+<tr>
+<td>Min Value</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Max Value</td>
+<td>9</td>
+<td>2</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>0</td>
+<td>1</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>This message is for driving the motors independently so that the user can directly control the motors using the buttons on the robot. Byte 1 in the message is the meesage type allowing the reciever to sort the message easier. Then byte 2 is the motor_id to select which motor the message is targeting. Byte 3 is the speed at which the motor will be moving at. </li>
+</ul>
+<h3 id="other-types-of-messages">Other Types of Messages</h3>
+<ul>
+<li>Any message that I recieve that I cannot handle will only be re-sent over uart if the sender and receiver are in the team.</li>
+<li>If I recieve a message that I sent but then recieved over uart, I will delete (not do anything with) the message since there is no function besides handling a message from me (not using data).</li>
+<li>If a message is addressed to someone or sent from someone not in my team then the system will not handle the message and perform a function. The system is designed to recognize and filter based upon sender and receiver being in the team. </li>
+</ul>
 
 
 
