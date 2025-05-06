@@ -675,7 +675,7 @@ The voltage regulator is a critical component for ensuring stable power delivery
 <h4 id="role-on-the-team">Role on the team</h4>
 <p>The actuator subsystem processes incoming data from the sensor subsystem and dynamically adjusts actuator states—whether turning components on/off or modifying their speed. This subsystem is critical for maintaining the sensor's tracking accuracy.</p>
 <h4 id="pins-needed">Pins needed</h4>
-<p>For my subsystem I am not completely sure how many pins I will use in total, however so far I need 7 so far. 3 for serial data and clock, and 4 for controlling the actuators. </p>
+<p>For my subsystem I require 27 pins not including power and ground or programming pins. I used 21 digital IO pins, 2 pins for Micro USB connection, and then 4 for the SPI interface. </p>
 <table>
 <thead>
 <tr>
@@ -688,33 +688,45 @@ The voltage regulator is a critical component for ensuring stable power delivery
 <tbody>
 <tr>
 <td>GPIO</td>
+<td>32</td>
+<td>21</td>
+<td>Please Refer to Schematic</td>
+</tr>
+<tr>
+<td>ADC</td>
 <td>25</td>
-<td>4</td>
-<td></td>
+<td>0</td>
+<td>N/A</td>
 </tr>
 <tr>
 <td>UART</td>
 <td>2</td>
 <td>2</td>
-<td>35,34</td>
+<td>RX and TX</td>
 </tr>
 <tr>
 <td>SPI</td>
-<td>2</td>
-<td>2</td>
-<td>TBD</td>
+<td>4</td>
+<td>4</td>
+<td>I0 13-16</td>
 </tr>
 <tr>
 <td>I2C</td>
-<td>N/A</td>
-<td>N/A</td>
+<td>0</td>
+<td>0</td>
 <td>N/A</td>
 </tr>
 <tr>
 <td>PWM</td>
-<td>N/A</td>
-<td>TBD</td>
-<td>TBD</td>
+<td>32</td>
+<td>2</td>
+<td>IO 38 and 47</td>
+</tr>
+<tr>
+<td>ICSP</td>
+<td>2</td>
+<td>2</td>
+<td>D+ and D-</td>
 </tr>
 </tbody>
 </table>
