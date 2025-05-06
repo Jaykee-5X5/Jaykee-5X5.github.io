@@ -561,89 +561,27 @@
   <h1>Index</h1>
 
 <h3 id="api-overview">API Overview</h3>
-<p>For the acutator subsystem I need to send a verification message on startup, robot following distance, following speed, and status. 
-Any Valid messages I recieve that are intended for another teammate, I will repeat the message along the daisychain. Valid messages sent to me will include; motor speed adjust, motor rotation change (motor 1 or 2). </p>
+<p>The actuator subsystem is responsible for handling key control commands and relaying verified messages across the daisy chain network. On startup, a verification message is sent, along with robot following distance, following speed, and system status updates.</p>
+<p>Any valid incoming messages intended for another team member are forwarded along the daisy chain. Messages directed to this subsystem must fall within the predefined command set, which includes:</p>
+<p>Motor Speed Adjustments</p>
+<p>Motor Rotation Control (for motor 1 or motor 2)</p>
 <p><a class="glightbox" href="Mes_Str.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="diagram_03" src="Mes_Str.png" title="Message types" /></a></p>
 <h4 id="change-motor-speed">Change Motor Speed</h4>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Byte 1</th>
-<th>Byte 2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Variable Name</td>
-<td>message_type</td>
-<td>motor_speed</td>
-</tr>
-<tr>
-<td>Variable Type</td>
-<td>uint16_t</td>
-<td>int16_t</td>
-</tr>
-<tr>
-<td>Min Value</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Max Value</td>
-<td>9</td>
-<td>100</td>
-</tr>
-<tr>
-<td>Example</td>
-<td>0</td>
-<td>50</td>
-</tr>
-</tbody>
-</table>
+<p>Modifies the speed of the motor based on the provided parameters.</p>
+<p>|Type | Byte 1  | Byte 2
+|Variable Name| message_type|   motor_speed|
+|Variable Type| uint16_t|   int16_t|
+|Min Value| 0|  0|
+|Max Value| 9|  100|
+|Example|   0|  50|</p>
 <h4 id="drive-individual-motor">Drive Individual motor</h4>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Byte 1</th>
-<th>Byte 2</th>
-<th>Byte 3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Variable Name</td>
-<td>message_type</td>
-<td>motor_id</td>
-<td>motor_speed</td>
-</tr>
-<tr>
-<td>Variable Type</td>
-<td>uint16_t</td>
-<td>uint16_t</td>
-<td>int16_t</td>
-</tr>
-<tr>
-<td>Min Value</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Max Value</td>
-<td>9</td>
-<td>2</td>
-<td>100</td>
-</tr>
-<tr>
-<td>Example</td>
-<td>0</td>
-<td>1</td>
-<td>30</td>
-</tr>
-</tbody>
-</table>
+<p>Directly controls a specific motor, enabling independent speed adjustments.</p>
+<p>|Type   |Byte 1|    Byte 2| Byte 3|
+|Variable Name  |message_type   |motor_id   |motor_speed|
+|Variable Type  |uint16_t   |uint16_t   |int16_t|
+|Min Value  |0  |1  |0|
+|Max Value  |9  |2  |100|
+|Example    |0  |1  |30|</p>
 
 
 

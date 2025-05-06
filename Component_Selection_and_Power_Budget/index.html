@@ -599,40 +599,20 @@
   <h1>Component Selection</h1>
 
 <h3 id="major-components">Major Components</h3>
-<p><strong>Switching Voltage Regulator</strong></p>
-<table>
-<thead>
-<tr>
-<th><strong>Solution</strong></th>
-<th><strong>Pros</strong></th>
-<th><strong>Cons</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a class="glightbox" href="LM2575_Voltage_Regulator.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="LM2575 Swithcing Voltage Regulator" src="LM2575_Voltage_Regulator.jpg" /></a><br>Option 1<br> LM2575 Switching Voltage Regulator<br>$1.75/each<br><a href="https://www.digikey.com/en/products/detail/microchip-technology/LM2575-3-3WU-TR/1027646">link to product</a></td>
-<td>* Simple external circuit<br>* Small size <br>* Meets surface mount constraint of project <br>* Good data sheet</td>
-<td>* All pins are on one side<br>* really small</td>
-</tr>
-<tr>
-<td><a class="glightbox" href="LT1767EMS8-_Voltage_Regulator.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="LT1767EMS8 Swithcing Voltage Regulator" src="LT1767EMS8-_Voltage_Regulator.jpg" /></a><br> Option 2 <br> LT1767EMS8 Switching Voltage Regulator <br>$10.57/each <br> <a href="https://www.digikey.com/en/products/detail/analog-devices-inc/LT1767EMS8-3-3-TRPBF/958447">Link to product</a></td>
-<td>* Already has a circuit for 12v to 3.3v in its data sheet <br>* Has a good pin layout <br></td>
-<td>* A lot more expensive <br>* A complicated external circuit is required</td>
-</tr>
-<tr>
-<td><a class="glightbox" href="L4971D_Voltage_Regulator.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="L4971D Switching Voltage Regulator" src="L4971D_Voltage_Regulator.jpg" /></a><br> Option 3 <br> L4971D Switching VOltage Regulator<br>$3.70/each <br> <a href="https://www.digikey.com/en/products/detail/stmicroelectronics/L4971D/585932">Link to product</a></td>
-<td>* Midprice range <br>* Adjustable voltage output</td>
-<td>* A lot of pins <br>* An external circuit with lots of components is required</td>
-</tr>
-</tbody>
-</table>
+<p><strong>Switching Voltage Regulator</strong>
+The voltage regulator is a critical component for ensuring stable power delivery to the ESP32 surface mount and supporting components on the PCB. Below are the evaluated options:
+| <strong>Solution</strong>                                                                                                                                                                                      | <strong>Pros</strong>                                                                                                                                    | <strong>Cons</strong>                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| <a class="glightbox" href="LM2575_Voltage_Regulator.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="LM2575 Swithcing Voltage Regulator" src="LM2575_Voltage_Regulator.jpg" /></a><br>Option 1<br> LM2575 Switching Voltage Regulator<br><span class="arithmatex">\(1.75/each&lt;br&gt;[link to product](https://www.digikey.com/en/products/detail/microchip-technology/LM2575-3-3WU-TR/1027646)           | \* Simple external circuit&lt;br&gt;\* Small size &lt;br&gt;\* Meets surface mount constraint of project &lt;br&gt;\* Good data sheet | \* All pins are on one side&lt;br&gt;\* really small                     |
+| ![LT1767EMS8 Swithcing Voltage Regulator](LT1767EMS8-_Voltage_Regulator.jpg)&lt;br&gt; Option 2 &lt;br&gt; LT1767EMS8 Switching Voltage Regulator &lt;br&gt;\)</span>10.57/each <br> <a href="https://www.digikey.com/en/products/detail/analog-devices-inc/LT1767EMS8-3-3-TRPBF/958447">Link to product</a> | * Already has a circuit for 12v to 3.3v in its data sheet <br>* Has a good pin layout <br>                           | * A lot more expensive <br>* A complicated external circuit is required                  |
+| <a class="glightbox" href="L4971D_Voltage_Regulator.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="L4971D Switching Voltage Regulator" src="L4971D_Voltage_Regulator.jpg" /></a><br> Option 3 <br> L4971D Switching VOltage Regulator<br>$3.70/each <br> <a href="https://www.digikey.com/en/products/detail/stmicroelectronics/L4971D/585932">Link to product</a>                             | * Midprice range <br>* Adjustable voltage output                                                                     | * A lot of pins <br>* An external circuit with lots of components is required    |</p>
 <p><strong>Choice:</strong> Option 1: LM2575 Switching Voltage Regulator</p>
-<p><strong>Rationale:</strong> I am following the footsteps of Jake, and also choosing this switching voltage regulator. This will help power the ESP32 surface mount and any other suporting components that will make their way onto the pcb later this semester. </p>
+<p><strong>Rationale:</strong> Following Jake’s approach, I have chosen the LM2575 regulator as it offers a simple circuit, compact size, and ease of integration while meeting surface mount constraints. This regulator will provide stable power for the ESP32 and additional PCB components.</p>
 <h3 id="microcontroller-selection">Microcontroller Selection</h3>
-<p>I am choosing a varaint of the ESP32 WROOM surface mount. The total number of pins I need are still TBD.
+<p>I have selected a variant of the ESP32 WROOM surface mount microcontroller. The total number of required pins is still to be determined, but the ESP32 provides sufficient versatility for actuator control and SPI communication.
 <a class="glightbox" href="ESP32.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ESP32" src="ESP32.jpg" /></a></p>
 <h4 id="role-on-the-team">Role on the team</h4>
-<p>The actuator subsystem is in charge of receiving data from the sensor subsystem, processing it, then adjusting the current state of the actuators. Whether that is on or off, or slow or fast, my subsystem is aimed at keeping the sensor subsystem on target. </p>
+<p>The actuator subsystem processes incoming data from the sensor subsystem and dynamically adjusts actuator states—whether turning components on/off or modifying their speed. This subsystem is critical for maintaining the sensor's tracking accuracy.</p>
 <h4 id="pins-needed">Pins needed</h4>
 <p>For my subsystem I am not completely sure how many pins I will use in total, however so far I need 7 so far. 3 for serial data and clock, and 4 for controlling the actuators. </p>
 <table>
@@ -678,7 +658,7 @@
 </tbody>
 </table>
 <h3 id="final-selection">Final Selection</h3>
-<p>The ESP32 is the best route, since it has a long track record of being used to conrol actuators in many hobbyist, and professional production applications. Since I am also planning on integrating a SPI communication link between my subsystem and the sensor subsystem, I personally think the ESP32 is the way to go. </p>
+<p>The ESP32 has a strong track record in actuator control applications, ranging from hobbyist projects to professional-grade systems. Additionally, since I plan to integrate an SPI communication link between the actuator and sensor subsystems, the ESP32 provides the necessary features and flexibility.</p>
 
 
 
