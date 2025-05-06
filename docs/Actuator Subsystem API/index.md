@@ -1,4 +1,6 @@
-
+---
+title: API
+---
 ### API Overview
 
 The actuator subsystem is responsible for handling key control commands and relaying verified messages across the daisy chain network. On startup, a verification message is sent, along with robot following distance, following speed, and system status updates.
