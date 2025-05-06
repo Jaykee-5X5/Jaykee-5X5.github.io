@@ -32,12 +32,12 @@ For my subsystem I require 27 pins not including power and ground or programming
 
 | Module | # Available | Needed | Associated Pins |
 | ------ | ----------- | ------ | --------------- |
-| GPIO   | 32          | 21     | Please Refer to Schematic                |
-| ADC    | 25          | 0      | N/A             |
+| GPIO   | 32          | 21     | Please Refer to Schematic |
+| ADC    | 25          | 0      | N/A |
 | UART   | 2           | 2      | RX and TX |
-| SPI    | 4           | 4      | I0 13-16             |
+| SPI    | 4           | 4      | I0 13-16 |
 | I2C    | 0           | 0      | N/A |
-| PWM    | 32          | 2      |  IO 38 and 47           |
+| PWM    | 32          | 2      |  IO 38 and 47 |
 | ICSP   | 2           | 2      | D+ and D- |
 
 ### Final Selection
