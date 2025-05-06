@@ -27,15 +27,18 @@ The actuator subsystem processes incoming data from the sensor subsystem and dyn
 
 
 #### Pins needed
-For my subsystem I am not completely sure how many pins I will use in total, however so far I need 7 so far. 3 for serial data and clock, and 4 for controlling the actuators. 
+
+For my subsystem I require 27 pins not including power and ground or programming pins. I used 21 digital IO pins, 2 pins for Micro USB connection, and then 4 for the SPI interface. 
 
 | Module | # Available | Needed | Associated Pins |
 | ------ | ----------- | ------ | --------------- |
-| GPIO   | 25          | 4      |                 |
-| UART   | 2           | 2      |   35,34         |
-| SPI    | 2           | 2      | TBD             |
-| I2C    | N/A         | N/A    | N/A             |
-| PWM    |  N/A        | TBD    | TBD             |
+| GPIO   | 32          | 21     | Please Refer to Schematic                |
+| ADC    | 25          | 0      | N/A             |
+| UART   | 2           | 2      | RX and TX |
+| SPI    | 4           | 4      | I0 13-16             |
+| I2C    | 0           | 0      | N/A |
+| PWM    | 32          | 2      |  IO 38 and 47           |
+| ICSP   | 2           | 2      | D+ and D- |
 
 ### Final Selection
 The ESP32 has a strong track record in actuator control applications, ranging from hobbyist projects to professional-grade systems. Additionally, since I plan to integrate an SPI communication link between the actuator and sensor subsystems, the ESP32 provides the necessary features and flexibility.
