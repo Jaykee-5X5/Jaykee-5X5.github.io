@@ -12,25 +12,30 @@ Motor Rotation Control (for motor 1 or motor 2)
 ![diagram_03](Mes_Str.png "Message types")
 
 #### Change Motor Speed
-Modifies the speed of the motor based on the provided parameters.
+| Type | Byte 1 | Byte 2 |
+| ---- | ------ | ------ |
+| Variable Name | message_type | motor_speed |
+| Variable Type | uint8_t | int8_t |
+| Min Value | 0 | 0 |
+| Max Value | 9 | 100 |
+| Example | 0 | 50 |
 
-|Type |	Byte 1	| Byte 2
-|Variable Name|	message_type|	motor_speed|
-|Variable Type|	uint16_t|	int16_t|
-|Min Value|	0|	0|
-|Max Value|	9|	100|
-|Example|	0|	50|
+- This message changes the speed at which the motors will move at. The message begins with the message type allowing the reciever to sort the message easier, then byte 2 is the target speed at which the motor will travel at. The speed value does not control the motor directly just states at what speed all the motors will move at. 
+
+
 #### Drive Individual motor
-Directly controls a specific motor, enabling independent speed adjustments.
+| Type | Byte 1 | Byte 2 | Byte 3 |
+| ---- | ------ | ------ | ------ |
+| Variable Name | message_type | motor_id | motor_speed |
+| Variable Type | uint8_t | uint8_t | int8_t |
+| Min Value | 0 | 1 | 0 |
+| Max Value | 9 | 2| 100 |
+| Example | 0 | 1 | 30 |
 
-|Type	|Byte 1|	Byte 2|	Byte 3|
-|Variable Name	|message_type	|motor_id	|motor_speed|
-|Variable Type	|uint16_t	|uint16_t	|int16_t|
-|Min Value	|0	|1	|0|
-|Max Value	|9	|2	|100|
-|Example	|0	|1	|30|
+- This message is for driving the motors independently so that the user can directly control the motors using the buttons on the robot. Byte 1 in the message is the meesage type allowing the reciever to sort the message easier. Then byte 2 is the motor_id to select which motor the message is targeting. Byte 3 is the speed at which the motor will be moving at. 
 
+### Other Types of Messages
 
-
-[def]: Mesage_Protocol_API.png
-[MessageProtocol]: Mesage_Protocol_API.png
+- Any message that I recieve that I cannot handle will only be re-sent over uart if the sender and receiver are in the team.
+- If I recieve a message that I sent but then recieved over uart, I will delete (not do anything with) the message since there is no function besides handling a message from me (not using data).
+- If a message is addressed to someone or sent from someone not in my team then the system will not handle the message and perform a function. The system is designed to recognize and filter based upon sender and receiver being in the team. 
